@@ -1,9 +1,9 @@
 {
-  "name": "crewstyle/olympus-code-field",
+  "name": "getolympus/olympus-code-field",
   "type": "olympus-field",
-  "description": "Olympus Hera",
+  "description": "[READ-ONLY] Code field, this component is a part of the Olympus Hera WordPress library.",
   "keywords": ["olympus", "hera", "field", "code", "framework", "php"],
-  "homepage": "https://github.com/crewstyle/olympus-code-field",
+  "homepage": "https://github.com/GetOlympus/olympus-code-field",
   "license": "MIT",
   "authors": [
     {
@@ -13,7 +13,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "crewstyle\\Field\\": "src/Code/"
+      "GetOlympus\\Field\\": "src/Code/"
     }
   },
   "extra": {
@@ -23,7 +23,7 @@
   },
   "minimum-stability": "stable",
   "require": {
-    "crewstyle/olympus-hera": "~0.0.1",
+    "getolympus/olympus-hera": "~0.0.1",
     "twig/twig": "~1.0"
   },
   "require-dev": {

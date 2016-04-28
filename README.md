@@ -9,7 +9,7 @@ _This component is a part of the [**Olympus Hera**](https://github.com/crewstyle
 ### Resources
 
   + [Documentation](https://olympus.readme.io/v1.0/docs/code-field)
-  + [Report issues](https://github.com/crewstyle/olympus-code-field/issues)
+  + [Report issues](https://github.com/GetOlympus/olympus-code-field/issues)
   + [Olympus Hera](https://github.com/crewstyle/OlympusHera)
 
 ---
@@ -22,7 +22,7 @@ _This component is a part of the [**Olympus Hera**](https://github.com/crewstyle
 + http://twitter.com/crewstyle
 + http://github.com/crewstyle
 
-Please, read [LICENSE](https://github.com/crewstyle/olympus-code-field/blob/master/LICENSE "LICENSE") for more details.  
+Please, read [LICENSE](https://github.com/GetOlympus/olympus-code-field/blob/master/LICENSE "LICENSE") for more details.  
 [![MIT](https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT "MIT")  
 
 ---
