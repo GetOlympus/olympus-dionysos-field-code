@@ -2,8 +2,8 @@
 
 namespace GetOlympus\Field;
 
-use GetOlympus\Hera\Controllers\Field;
-use GetOlympus\Hera\Controllers\Translate;
+use GetOlympus\Hera\Field\Controller\Field;
+use GetOlympus\Hera\Translate\Controller\Translate;
 
 /**
  * Builds Code field.
@@ -42,7 +42,7 @@ class Code extends Field
         // Build defaults
         $defaults = [
             'id' => '',
-            'title' => Translate::t('code.title'),
+            'title' => Translate::t('code.title', [], 'codefield'),
             'description' => '',
             'change' => true,
             'readonly' => false,
@@ -105,59 +105,59 @@ class Code extends Field
     {
         return [
             [
-                'title' => Translate::t('code.modes.css'),
+                'title' => Translate::t('code.modes.css', [], 'codefield'),
                 'mode' => ['text/css', 'css'],
             ],
             [
-                'title' => Translate::t('code.modes.diff'),
+                'title' => Translate::t('code.modes.diff', [], 'codefield'),
                 'mode' => ['text/x-diff','x-diff','diff'],
             ],
             [
-                'title' => Translate::t('code.modes.html'),
+                'title' => Translate::t('code.modes.html', [], 'codefield'),
                 'mode' => ['text/html','html'],
             ],
             [
-                'title' => Translate::t('code.modes.js'),
+                'title' => Translate::t('code.modes.js', [], 'codefield'),
                 'mode' => ['text/javascript','javascript','js'],
             ],
             [
-                'title' => Translate::t('code.modes.json'),
+                'title' => Translate::t('code.modes.json', [], 'codefield'),
                 'mode' => ['application/json','json'],
             ],
             [
-                'title' => Translate::t('code.modes.md'),
+                'title' => Translate::t('code.modes.md', [], 'codefield'),
                 'mode' => ['text/x-markdown','markdown','md'],
             ],
             [
-                'title' => Translate::t('code.modes.php'),
+                'title' => Translate::t('code.modes.php', [], 'codefield'),
                 'mode' => ['application/x-httpd-php','x-httpd-php','php'],
             ],
             [
-                'title' => Translate::t('code.modes.python'),
+                'title' => Translate::t('code.modes.python', [], 'codefield'),
                 'mode' => ['text/x-python','x-python','python'],
             ],
             [
-                'title' => Translate::t('code.modes.ruby'),
+                'title' => Translate::t('code.modes.ruby', [], 'codefield'),
                 'mode' => ['text/x-ruby','x-ruby','ruby'],
             ],
             [
-                'title' => Translate::t('code.modes.sh'),
+                'title' => Translate::t('code.modes.sh', [], 'codefield'),
                 'mode' => ['text/x-sh','x-sh','sh'],
             ],
             [
-                'title' => Translate::t('code.modes.mysql'),
+                'title' => Translate::t('code.modes.mysql', [], 'codefield'),
                 'mode' => ['text/x-mysql','x-mysql','mysql'],
             ],
             [
-                'title' => Translate::t('code.modes.mariadb'),
+                'title' => Translate::t('code.modes.mariadb', [], 'codefield'),
                 'mode' => ['text/x-mariadb','x-mariadb','mariadb'],
             ],
             [
-                'title' => Translate::t('code.modes.xml'),
+                'title' => Translate::t('code.modes.xml', [], 'codefield'),
                 'mode' => ['application/xml','xml'],
             ],
             [
-                'title' => Translate::t('code.modes.yaml'),
+                'title' => Translate::t('code.modes.yaml', [], 'codefield'),
                 'mode' => ['text/x-yaml','x-yaml','yaml'],
             ],
         ];
