@@ -1,12 +1,10 @@
-{% set twigtpl = template and template == 'terms' ? 'terms' : 'pages' %}
-
-{% extends "@template/Layouts/Extends/" ~ twigtpl ~ ".html.twig" %}
+{% extends template_path %}
 
 {% block id %}{{ id }}{% endblock %}
 {% block label %}<label for="{{ id }}_code">{{ title|raw }}</label>{% endblock %}
 
 {% block field %}
-    <div class="olz-field-content code">
+    <div class="olh-field-content code">
         <div class="CodeMirror-all">
             {% if change %}
                 <select name="{{ id }}[mode]" class="change-mode no-selectize">
@@ -20,7 +18,9 @@
 
             <textarea name="{{ id }}[code]" id="{{ id }}_code" rows="{{ rows }}"{{ readonly ? ' readonly' : '' }} class="code">{{ val.code }}</textarea>
         </div>
-
-        {% if description %}<p class="olz-description">{{ description|raw }}</p>{% endif %}
     </div>
+{% endblock %}
+
+{% block description %}
+    {{ description|raw }}
 {% endblock %}

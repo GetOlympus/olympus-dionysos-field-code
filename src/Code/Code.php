@@ -20,22 +20,21 @@ use GetOlympus\Hera\Translate\Controller\Translate;
 class Code extends Field
 {
     /**
-     * @var string
+     * Prepare variables.
      */
-    protected $faIcon = 'fa-code';
-
-    /**
-     * @var string
-     */
-    protected $template = 'code.html.twig';
+    protected function setVars()
+    {
+        $this->getModel()->setFaIcon('fa-code');
+        $this->getModel()->setScript('js'.S.'code.js');
+        $this->getModel()->setStyle('css'.S.'code.css');
+        $this->getModel()->setTemplate('code.html.twig');
+    }
 
     /**
      * Prepare HTML component.
      *
      * @param array $content
      * @param array $details
-     *
-     * @since 0.0.1
      */
     protected function getVars($content, $details = [])
     {
@@ -47,15 +46,7 @@ class Code extends Field
             'change' => true,
             'readonly' => false,
             'rows' => 4,
-            'default' => [],
             'modes' => $this->getCodeModes(),
-
-            // details
-            'post' => 0,
-            'prefix' => '',
-            'template' => 'pages',
-
-            // defaults
             'default' => [
                 'mode' => 'application/json',
                 'code' => ''
@@ -67,18 +58,16 @@ class Code extends Field
         $vars['default']['mode'] = $this->retrieveMode($vars['default']['mode']);
 
         // Retrieve field value
-        $vars['val'] = $this->getValue($details, $vars['default'], $content['id'], true);
+        $vars['val'] = $this->getValue($content['id'], $details, $vars['default']);
 
         // Update vars
-        $this->getField()->setVars($vars);
+        $this->getModel()->setVars($vars);
     }
 
     /**
      * Return all available modes.
      *
-     * @return array $array
-     *
-     * @since 0.0.1
+     * @return array $codes
      */
     protected function getCodeModes()
     {
@@ -97,9 +86,7 @@ class Code extends Field
     /**
      * Return all available modes.
      *
-     * @return array $array
-     *
-     * @since 0.0.1
+     * @return array $modes
      */
     protected function getModes()
     {
@@ -166,10 +153,8 @@ class Code extends Field
     /**
      * Return all available modes.
      *
-     * @param string $search Mode we are looking for
-     * @return string $good Real mode name
-     *
-     * @since 0.0.1
+     * @param   string $search  Mode we are looking for
+     * @return  string $good    Real mode name
      */
     protected function retrieveMode($search)
     {
