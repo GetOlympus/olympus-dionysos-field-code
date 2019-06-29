@@ -2,7 +2,7 @@
   "name": "getolympus/olympus-code-field",
   "type": "olympus-field",
   "description": "Code field, this component is a part of the Olympus Zeus Core framework.",
-  "keywords": ["olympus-zeus", "code", "field", "custom", "framework", "php", "wordpress"],
+  "keywords": ["olympus-zeus", "code", "field", "custom", "codemirror", "framework", "php", "wordpress"],
   "homepage": "https://github.com/GetOlympus/olympus-code-field",
   "license": "MIT",
   "authors": [
