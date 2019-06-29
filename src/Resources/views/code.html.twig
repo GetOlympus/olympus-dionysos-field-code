@@ -1,23 +1,19 @@
 {% extends template_path %}
 
-{% block id %}{{ id }}{% endblock %}
-{% block label %}<label for="{{ id }}_code">{{ title|raw }}</label>{% endblock %}
+{% block id %}{{ identifier }}{% endblock %}
+{% block label %}<label for="{{ identifier }}">{{ title|raw }}</label>{% endblock %}
 
 {% block field %}
-    <div class="olh-field-content code">
-        <div class="CodeMirror-all">
-            {% if change %}
-                <select name="{{ name }}[mode]" class="change-mode no-selectize">
-                    {% for k, m in modes %}
-                        <option value="{{ k }}"{{ k == val.mode ? ' selected="selected"' : '' }}>{{ m }}</option>
-                    {% endfor %}
-                </select>
-            {% else %}
-                <input type="hidden" name="{{ name }}[mode]" value="{{ val.mode }}" class="change-mode"/>
-            {% endif %}
+    <div class="olz-field code">
+        <textarea name="{{ name }}" id="{{ identifier }}" rows="{{ rows }}"{{ readonly ? ' readonly' : '' }} class="content sync-input" hidden>{{ value }}</textarea>
 
-            <textarea name="{{ name }}[code]" id="{{ id }}_code" rows="{{ rows }}"{{ readonly ? ' readonly' : '' }} class="code">{{ val.code }}</textarea>
-        </div>
+        <script>
+            (function($) {
+                $(document).ready(function() {
+                    wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace("'", "&#39;")|raw }});
+                });
+            })(jQuery);
+        </script>
     </div>
 {% endblock %}
 

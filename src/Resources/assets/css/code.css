@@ -1,6 +1,0 @@
-/*!
- * code.less
- *
- * Copyright 2016 Achraf Chouk
- * Achraf Chouk (https://github.com/crewstyle)
- */.olh-field-content.code{position:relative}.olh-field-content.code .CodeMirror-all{background-color:#f1f1f1;border:1px solid rgba(153,153,153,.7);border-radius:3px;box-shadow:0 0 0 2px rgba(241,241,241,.7),inset 0 1px 2px rgba(0,0,0,.1);padding:5px}.olh-field-content.code .CodeMirror-all.focused{border-color:#1297e0;box-shadow:0 0 0 2px rgba(18,151,224,.3),inset 0 1px 2px rgba(0,0,0,.1)}.olh-field-content.code .CodeMirror-all .change-mode{float:right;height:25px;margin:0 0 5px;width:200px}.olh-field-content.code .CodeMirror-all textarea{background-color:#181a21;color:#fff;display:block;margin:0;resize:vertical;width:100%}.olh-field-content.code .CodeMirror-all textarea:focus{color:#fff}.olh-field-content.code .CodeMirror{clear:both;font-size:12px;height:auto}.olh-field-content.code .CodeMirror-gutters{background-color:transparent;border:none;border-right:10px solid transparent;bottom:0;height:auto}.olh-field-content.code .CodeMirror-linenumber{color:#bebebe}

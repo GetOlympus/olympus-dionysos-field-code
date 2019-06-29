@@ -20,67 +20,65 @@ use GetOlympus\Zeus\Translate\Controller\Translate;
 class Code extends Field
 {
     /**
-     * Prepare variables.
+     * @var string
      */
-    protected function setVars()
+    protected $template = 'code.html.twig';
+
+    /**
+     * @var string
+     */
+    protected $textdomain = 'codefield';
+
+    /**
+     * Prepare defaults.
+     *
+     * @return array
+     */
+    protected function getDefaults()
     {
-        $this->getModel()->setFaIcon('fa-code');
-        $this->getModel()->setScript('js'.S.'code.js');
-        $this->getModel()->setStyle('css'.S.'code.css');
-        $this->getModel()->setTemplate('code.html.twig');
+        return [
+            'title' => Translate::t('code.title', $this->textdomain),
+            'description' => '',
+            'mode' => 'text/html',
+            'rows' => 4,
+
+            /**
+             * code mirror settings
+             * @see wp_get_code_editor_settings()
+             */
+            'settings' => [
+                'indentUnit'     => 2,
+                'indentWithTabs' => false,
+                'tabSize'        => 2,
+            ],
+
+            // texts
+            't_title' => Translate::t('code.formtitle', $this->textdomain),
+            't_content' => Translate::t('code.formcontent', $this->textdomain),
+        ];
     }
 
     /**
-     * Prepare HTML component.
+     * Prepare variables.
      *
-     * @param array $content
-     * @param array $details
+     * @param  object  $value
+     * @param  array   $contents
+     *
+     * @return array
      */
-    protected function getVars($content, $details = [])
+    protected function getVars($value, $contents)
     {
-        // Build defaults
-        $defaults = [
-            'id' => '',
-            'title' => Translate::t('code.title', [], 'codefield'),
-            'description' => '',
-            'change' => true,
-            'readonly' => false,
-            'rows' => 4,
-            'modes' => $this->getCodeModes(),
-            'default' => [
-                'mode' => 'application/json',
-                'code' => ''
-            ],
-        ];
+        // Get contents
+        $vars = $contents;
 
-        // Build defaults data
-        $vars = array_merge($defaults, $content);
-        $vars['default']['mode'] = $this->retrieveMode($vars['default']['mode']);
-
-        // Retrieve field value
-        $vars['val'] = $this->getValue($content['id'], $details, $vars['default']);
+        // Initialize code editor
+        $vars['code_editor'] = wp_enqueue_code_editor([
+            'type'       => $this->retrieveMode($vars['mode']),
+            'codemirror' => $vars['settings'],
+        ]);
 
         // Update vars
-        $this->getModel()->setVars($vars);
-    }
-
-    /**
-     * Return all available modes.
-     *
-     * @return array $codes
-     */
-    protected function getCodeModes()
-    {
-        // List all modes
-        $modes = $this->getModes();
-        $codemodes = [];
-
-        // Build select
-        foreach ($modes as $mode) {
-            $codemodes[$mode['mode'][0]] = $mode['title'];
-        }
-
-        return $codemodes;
+        return $vars;
     }
 
     /**
@@ -91,62 +89,20 @@ class Code extends Field
     protected function getModes()
     {
         return [
-            [
-                'title' => Translate::t('code.modes.css', [], 'codefield'),
-                'mode' => ['text/css', 'css'],
-            ],
-            [
-                'title' => Translate::t('code.modes.diff', [], 'codefield'),
-                'mode' => ['text/x-diff','x-diff','diff'],
-            ],
-            [
-                'title' => Translate::t('code.modes.html', [], 'codefield'),
-                'mode' => ['text/html','html'],
-            ],
-            [
-                'title' => Translate::t('code.modes.js', [], 'codefield'),
-                'mode' => ['text/javascript','javascript','js'],
-            ],
-            [
-                'title' => Translate::t('code.modes.json', [], 'codefield'),
-                'mode' => ['application/json','json'],
-            ],
-            [
-                'title' => Translate::t('code.modes.md', [], 'codefield'),
-                'mode' => ['text/x-markdown','markdown','md'],
-            ],
-            [
-                'title' => Translate::t('code.modes.php', [], 'codefield'),
-                'mode' => ['application/x-httpd-php','x-httpd-php','php'],
-            ],
-            [
-                'title' => Translate::t('code.modes.python', [], 'codefield'),
-                'mode' => ['text/x-python','x-python','python'],
-            ],
-            [
-                'title' => Translate::t('code.modes.ruby', [], 'codefield'),
-                'mode' => ['text/x-ruby','x-ruby','ruby'],
-            ],
-            [
-                'title' => Translate::t('code.modes.sh', [], 'codefield'),
-                'mode' => ['text/x-sh','x-sh','sh'],
-            ],
-            [
-                'title' => Translate::t('code.modes.mysql', [], 'codefield'),
-                'mode' => ['text/x-mysql','x-mysql','mysql'],
-            ],
-            [
-                'title' => Translate::t('code.modes.mariadb', [], 'codefield'),
-                'mode' => ['text/x-mariadb','x-mariadb','mariadb'],
-            ],
-            [
-                'title' => Translate::t('code.modes.xml', [], 'codefield'),
-                'mode' => ['application/xml','xml'],
-            ],
-            [
-                'title' => Translate::t('code.modes.yaml', [], 'codefield'),
-                'mode' => ['text/x-yaml','x-yaml','yaml'],
-            ],
+            ['text/css', 'css'],
+            ['text/x-diff', 'x-diff', 'diff'],
+            ['text/html', 'html'],
+            ['text/javascript', 'javascript', 'js'],
+            ['application/json', 'json'],
+            ['text/x-markdown', 'markdown', 'md'],
+            ['application/x-httpd-php', 'x-httpd-php', 'php'],
+            ['text/x-python', 'x-python', 'python'],
+            ['text/x-ruby', 'x-ruby', 'ruby'],
+            ['text/x-sh', 'x-sh', 'sh'],
+            ['text/x-mysql', 'x-mysql', 'mysql'],
+            ['text/x-mariadb', 'x-mariadb', 'mariadb'],
+            ['application/xml', 'xml'],
+            ['text/x-yaml', 'x-yaml', 'yaml'],
         ];
     }
 
@@ -163,11 +119,11 @@ class Code extends Field
 
         // Build select
         foreach ($modes as $mode) {
-            if (in_array($search, $mode['mode'])) {
-                return $mode['mode'][0];
+            if (in_array($search, $mode)) {
+                return $mode[0];
             }
         }
 
-        return 'application/json';
+        return 'text/html';
     }
 }
