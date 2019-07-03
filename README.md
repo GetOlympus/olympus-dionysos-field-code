@@ -1,4 +1,4 @@
-# Code Field ![For Olympus](https://img.shields.io/badge/for-Olympus-44cc11.svg?style=flat-square) ![For WordPress](https://img.shields.io/badge/for-WordPress-00aadc.svg?style=flat-square)
+# Code Field ![For Olympus](https://img.shields.io/badge/for-Olympus-44cc11.svg?style=flat-square) ![For WordPress](https://img.shields.io/badge/for-WordPress-00aadc.svg?style=flat-square) ![CodeFactor grade](https://www.codefactor.io/repository/github/GetOlympus/olympus-code-field/badge?style=flat-square)
 
 _This component is a part of the [**Olympus Zeus Core**](https://github.com/GetOlympus/Zeus-Core) **WordPress** framework._  
 _It uses the default WordPress code field made with a complete integration with codemirror JS component._  
