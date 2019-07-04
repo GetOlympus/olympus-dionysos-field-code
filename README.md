@@ -1,5 +1,5 @@
 # Code Field
-> This component is a part of the [**Olympus Zeus Core**](https://github.com/GetOlympus/Zeus-Core) **WordPress** framework.
+> This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
 
 [![Olympus Component][olympus-image]][olympus-url]
@@ -14,7 +14,7 @@ Using `composer` in your PHP project:
 composer install getolympus/olympus-code-field
 ```
 
-## Usage example
+## Field initialization
 
 Use the following lines to add a `code field` in your **WordPress** admin pages or custom post type meta fields:
 
@@ -28,6 +28,8 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
 ]);
 ```
 
+## Usage example
+
 Fill the form properly (with JSON in this example):
 
 ```json
@@ -35,6 +37,8 @@ Fill the form properly (with JSON in this example):
     "response": "With a frozen bug."
 }
 ```
+
+## Retrive data
 
 Retrieve your value from Database with a simple `$value = get_option('my_code_field_id')`.  
 Note you can use the `stripslashes($value)` php function to remove backslashes:
@@ -53,7 +57,7 @@ Note you can use the `stripslashes($value)` php function to remove backslashes:
 
 ## Authors and Copyright
 
-Achraf Chouk [@crewstyle](http://twitter.com/crewstyle)
+Achraf Chouk [![@crewstyle][twitter-image]][twitter-url]
 
 Please, read [LICENSE][license-blob] for more information.  
 [![MIT][license-image]][license-url]
@@ -76,10 +80,13 @@ Please, read [LICENSE][license-blob] for more information.
 <!-- links & imgs dfn's -->
 [olympus-image]: https://img.shields.io/badge/for-Olympus-44cc11.svg?style=flat-square
 [olympus-url]: https://github.com/GetOlympus
+[zeus-url]: https://github.com/GetOlympus/Zeus-Core
 [codefactor-image]: https://www.codefactor.io/repository/github/GetOlympus/olympus-code-field/badge?style=flat-square
 [codefactor-url]: https://www.codefactor.io/repository/github/getolympus/olympus-code-field
-[packagist-image]: https://img.shields.io/packagist/v/getolympus/olympus-code-field.svg?style=flat-square
-[packagist-url]: https://packagist.org/packages/getolympus/olympus-code-field
 [license-blob]: https://github.com/GetOlympus/olympus-code-field/blob/master/LICENSE
 [license-image]: https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat-square
 [license-url]: http://opensource.org/licenses/MIT
+[packagist-image]: https://img.shields.io/packagist/v/getolympus/olympus-code-field.svg?style=flat-square
+[packagist-url]: https://packagist.org/packages/getolympus/olympus-code-field
+[twitter-image]: https://img.shields.io/badge/crewstyle-blue.svg?style=social&logo=twitter
+[twitter-url]: http://twitter.com/crewstyle
