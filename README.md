@@ -67,7 +67,8 @@ Note you can use the `stripslashes($value)` php function to remove backslashes:
 
 ## Authors and Copyright
 
-Achraf Chouk [![@crewstyle][twitter-image]][twitter-url]
+Achraf Chouk  
+[![@crewstyle][twitter-image]][twitter-url]
 
 Please, read [LICENSE][license-blob] for more information.  
 [![MIT][license-image]][license-url]
