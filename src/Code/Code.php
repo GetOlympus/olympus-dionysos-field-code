@@ -38,6 +38,7 @@ class Code extends Field
     {
         return [
             'title' => Translate::t('code.title', $this->textdomain),
+            'default' => '',
             'description' => '',
             'mode' => 'text/html',
             'rows' => 4,

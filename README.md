@@ -23,8 +23,18 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
     'title' => 'How do Penguins code their icebergs?',
     'default' => 'With a frozen bug.',
     'description' => 'A simple question to let you know how to seduce a penguin.',
-    'rows' => 4,
     'mode' => 'json',
+    'rows' => 4,
+
+    /**
+     * code mirror settings
+     * @see wp_get_code_editor_settings()
+     */
+    'settings' => [
+        'indentUnit'     => 2,
+        'indentWithTabs' => false,
+        'tabSize'        => 2,
+    ],
 ]);
 ```
 
@@ -43,9 +53,9 @@ Fill the form properly (with JSON in this example):
 Retrieve your value from Database with a simple `$value = get_option('my_code_field_id')`.  
 Note you can use the `stripslashes($value)` php function to remove backslashes:
 
-```html
+```json
 {
-    \"response\": \"With a frozen bug.\"
+    "response": "With a frozen bug."
 }
 ```
 
