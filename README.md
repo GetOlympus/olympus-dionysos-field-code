@@ -23,12 +23,12 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
     'title' => 'How do Penguins code their icebergs?',
     'default' => 'With a frozen bug.',
     'description' => 'A simple question to let you know how to seduce a penguin.',
-    'mode' => 'json',
+    'mode' => 'json', // see the `Accepted mode` section
     'rows' => 4,
 
     /**
-     * code mirror settings
-     * @see wp_get_code_editor_settings()
+     * Code mirror settings
+     * @see https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/
      */
     'settings' => [
         'indentUnit'     => 2,
@@ -37,6 +37,23 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
     ],
 ]);
 ```
+
+## Accepted mode
+
+* `text/css` or `css`
+* `text/x-diff` or `x-diff` or `diff`
+* `text/html` or `html`
+* `text/javascript` or `javascript` or `js`
+* `application/json` or `json`
+* `text/x-markdown` or `markdown` or `md`
+* `application/x-httpd-php` or `x-httpd-php` or `php`
+* `text/x-python` or `x-python` or `python`
+* `text/x-ruby` or `x-ruby` or `ruby`
+* `text/x-sh` or `x-sh` or `sh`
+* `text/x-mysql` or `x-mysql` or `mysql`
+* `text/x-mariadb` or `x-mariadb` or `mariadb`
+* `application/xml` or `xml`
+* `text/x-yaml` or `x-yaml` or `yaml`
 
 ## Usage example
 

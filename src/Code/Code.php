@@ -13,8 +13,6 @@ use GetOlympus\Zeus\Translate\Controller\Translate;
  * @author Achraf Chouk <achrafchouk@gmail.com>
  * @since 0.0.1
  *
- * @see https://olympus.readme.io/v1.0/docs/code-field
- *
  */
 
 class Code extends Field
@@ -44,8 +42,8 @@ class Code extends Field
             'rows' => 4,
 
             /**
-             * code mirror settings
-             * @see wp_get_code_editor_settings()
+             * Code mirror settings
+             * @see https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/
              */
             'settings' => [
                 'indentUnit'     => 2,
