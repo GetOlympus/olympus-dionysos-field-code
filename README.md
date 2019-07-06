@@ -23,7 +23,7 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
     'title' => 'How do Penguins code their icebergs?',
     'default' => 'With a frozen bug.',
     'description' => 'A simple question to let you know how to seduce a penguin.',
-    'mode' => 'json', // see the `Accepted mode` section
+    'mode' => 'json',
     'rows' => 4,
 
     /**
@@ -37,6 +37,17 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
     ],
 ]);
 ```
+
+## Variables definitions
+
+| Variable | Type | Mandatory | Default value if not set | Accepted values |
+| -------- | ---- | --------- | ------------------------ | --------------- |
+| `title`       | String  | :white_check_mark: | `'Code'` | *empty* |
+| `default`     | String  |  | *empty* | *empty* |
+| `description` | String  |  | *empty* | *empty* |
+| `mode`        | String  | :white_check_mark: | `text/html` | see [Accepted mode](#accepted-mode) section |
+| `rows`        | Integer | :white_check_mark: | `4` | `> 1` |
+| `settings`    | Array   |  | *see above* | see [reference](https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/) |
 
 ## Accepted mode
 
@@ -67,20 +78,21 @@ Fill the form properly (with JSON in this example):
 
 ## Retrive data
 
-Retrieve your value from Database with a simple `$value = get_option('my_code_field_id')`.  
-Note you can use the `stripslashes($value)` php function to remove backslashes:
+Retrieve your value from Database with a simple `get_option('my_code_field_id', '')` (see [documentation][getoption-url]):
 
-```json
-{
-    "response": "With a frozen bug."
-}
+```php
+// Get code from Database
+$code = get_option('my_code_field_id', '');
+
+// Display code in HTML tag
+echo '<pre>'.htmlspecialchars($code).'</pre>';
 ```
 
 ## Release History
 
 * 0.0.8
-    * FIX: component is now CodeFactor compliant
-    * ADD: add new version compatible with Zeus-Core latest version
+- [x] FIX: component is now CodeFactor compliant
+- [x] ADD: new version compatible with Zeus-Core latest version
 
 ## Authors and Copyright
 
@@ -111,6 +123,7 @@ Please, read [LICENSE][license-blob] for more information.
 [zeus-url]: https://github.com/GetOlympus/Zeus-Core
 [codefactor-image]: https://www.codefactor.io/repository/github/GetOlympus/olympus-code-field/badge?style=flat-square
 [codefactor-url]: https://www.codefactor.io/repository/github/getolympus/olympus-code-field
+[getoption-url]: https://developer.wordpress.org/reference/functions/get_option/
 [license-blob]: https://github.com/GetOlympus/olympus-code-field/blob/master/LICENSE
 [license-image]: https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat-square
 [license-url]: http://opensource.org/licenses/MIT
