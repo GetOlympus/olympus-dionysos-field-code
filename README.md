@@ -47,7 +47,7 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
 | `description` | String  | *empty* | *empty* |
 | `mode`        | String  | `text/html` | see [Accepted mode](#accepted-mode) |
 | `rows`        | Integer | `4` | `> 1` |
-| `settings`    | Array   | see [Field initialization](#field-initialization) | see [WordPress documentation](https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/) |
+| `settings`    | Array   | see [Field initialization](#field-initialization) | see [WordPress reference](https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/) |
 
 ## Accepted mode
 
@@ -78,7 +78,7 @@ Fill the form properly (with JSON in this example):
 
 ## Retrive data
 
-Retrieve your value from Database with a simple `get_option('my_code_field_id', '')` (see [WordPress documentation][getoption-url]):
+Retrieve your value from Database with a simple `get_option('my_code_field_id', '')` (see [WordPress reference][getoption-url]):
 
 ```php
 // Get code from Database
