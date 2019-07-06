@@ -40,14 +40,14 @@ return \GetOlympus\Field\Code::build('my_code_field_id', [
 
 ## Variables definitions
 
-| Variable | Type | Mandatory | Default value if not set | Accepted values |
-| -------- | ---- | --------- | ------------------------ | --------------- |
-| `title`       | String  | :white_check_mark: | `'Code'` | *empty* |
-| `default`     | String  |  | *empty* | *empty* |
-| `description` | String  |  | *empty* | *empty* |
-| `mode`        | String  | :white_check_mark: | `text/html` | see [Accepted mode](#accepted-mode) section |
-| `rows`        | Integer | :white_check_mark: | `4` | `> 1` |
-| `settings`    | Array   |  | *see above* | see [reference](https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/) |
+| Variable      | Type    | Default value if not set | Accepted values |
+| ------------- | ------- | ------------------------ | --------------- |
+| `title`       | String  | `'Code'` | *empty* |
+| `default`     | String  | *empty* | *empty* |
+| `description` | String  | *empty* | *empty* |
+| `mode`        | String  | `text/html` | see [Accepted mode](#accepted-mode) |
+| `rows`        | Integer | `4` | `> 1` |
+| `settings`    | Array   | see [Field initialization](#field-initialization) | see [documentation](https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/) |
 
 ## Accepted mode
 
