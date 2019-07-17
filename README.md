@@ -1,3 +1,5 @@
+<img src="https://useiconic.com/open-iconic/svg/code.svg" height="70">
+
 # Code Field
 > This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
@@ -20,11 +22,11 @@ Use the following lines to add a `code field` in your **WordPress** admin pages 
 
 ```php
 return \GetOlympus\Field\Code::build('my_code_field_id', [
-    'title' => 'How do Penguins code their icebergs?',
-    'default' => 'With a frozen bug.',
+    'title'       => 'How do Penguins code their icebergs?',
+    'default'     => 'With a frozen bug.',
     'description' => 'A simple question to let you know how to seduce a penguin.',
-    'mode' => 'json',
-    'rows' => 4,
+    'mode'        => 'json',
+    'rows'        => 4,
 
     /**
      * Code mirror settings
@@ -90,6 +92,9 @@ echo '<pre>'.htmlspecialchars($code).'</pre>';
 
 ## Release History
 
+* 0.0.9
+- [x] FIX: remove twig dependency from composer
+
 * 0.0.8
 - [x] FIX: component is now CodeFactor compliant
 - [x] ADD: new version compatible with Zeus-Core latest version
@@ -103,7 +108,7 @@ Please, read [LICENSE][license-blob] for more information.
 [![MIT][license-image]][license-url]
 
 [https://github.com/crewstyle](https://github.com/crewstyle)  
-[http://fr.linkedin.com/in/achrafchouk](http://fr.linkedin.com/in/achrafchouk)
+[http://fr.linkedin.com/in/achrafchouk](https://fr.linkedin.com/in/achrafchouk)
 
 ## Contributing
 
