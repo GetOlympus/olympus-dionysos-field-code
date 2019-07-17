@@ -1,4 +1,6 @@
-# ![](https://img.icons8.com/nolan/1x/source-code.png) Code Field
+<img align="left" src="https://img.icons8.com/nolan/1x/source-code.png">
+
+# Code Field
 > This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
 
