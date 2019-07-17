@@ -111,7 +111,7 @@ Please, read [LICENSE][license-blob] for more information.
 [![MIT][license-image]][license-url]
 
 [https://github.com/crewstyle](https://github.com/crewstyle)  
-[http://fr.linkedin.com/in/achrafchouk](https://fr.linkedin.com/in/achrafchouk)
+[https://fr.linkedin.com/in/achrafchouk](https://fr.linkedin.com/in/achrafchouk)
 
 ## Contributing
 
