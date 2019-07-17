@@ -1,6 +1,4 @@
-<img src="https://useiconic.com/open-iconic/svg/code.svg" height="70">
-
-# Code Field
+# ![](https://img.icons8.com/nolan/1x/source-code.png) Code Field
 > This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
 
