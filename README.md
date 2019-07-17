@@ -1,4 +1,4 @@
-<img align="left" src="https://img.icons8.com/nolan/1x/source-code.png">
+<img align="left" style="margin-top:10px" src="https://img.icons8.com/nolan/1x/source-code.png">
 
 # Code Field
 > This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.  
