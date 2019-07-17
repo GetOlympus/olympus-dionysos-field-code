@@ -15,7 +15,7 @@
 Using `composer` in your PHP project:
 
 ```sh
-composer install getolympus/olympus-code-field
+composer require getolympus/olympus-code-field
 ```
 
 ## Field initialization
