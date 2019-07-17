@@ -92,8 +92,11 @@ echo '<pre>'.htmlspecialchars($code).'</pre>';
 
 ## Release History
 
-* 0.0.9
+* 0.0.10
 - [x] FIX: remove twig dependency from composer
+
+* 0.0.9
+- [x] FIX: remove zeus-core dependency from composer
 
 * 0.0.8
 - [x] FIX: component is now CodeFactor compliant
