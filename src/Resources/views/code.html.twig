@@ -10,7 +10,7 @@
         <script>
             (function($) {
                 $(document).ready(function() {
-                    wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace("'", "&#39;")|raw }});
+                    wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace({"'": "&#39;"})|raw }});
                 });
             })(jQuery);
         </script>
