@@ -2,13 +2,13 @@
 
 namespace GetOlympus\Field;
 
-use GetOlympus\Zeus\Field\Controller\Field;
-use GetOlympus\Zeus\Translate\Controller\Translate;
+use GetOlympus\Zeus\Field\Field;
+use GetOlympus\Zeus\Utils\Translate;
 
 /**
  * Builds Code field.
  *
- * @package Field
+ * @package DionysosField
  * @subpackage Code
  * @author Achraf Chouk <achrafchouk@gmail.com>
  * @since 0.0.1
@@ -32,27 +32,27 @@ class Code extends Field
      *
      * @return array
      */
-    protected function getDefaults()
+    protected function getDefaults() : array
     {
         return [
-            'title' => Translate::t('code.title', $this->textdomain),
-            'default' => '',
+            'title'       => Translate::t('code.title', $this->textdomain),
+            'default'     => '',
             'description' => '',
-            'mode' => 'text/html',
-            'rows' => 4,
+            'mode'        => 'text/html',
+            'rows'        => 4,
 
             /**
              * Code mirror settings
              * @see https://developer.wordpress.org/reference/functions/wp_get_code_editor_settings/
              */
-            'settings' => [
+            'settings'  => [
                 'indentUnit'     => 2,
                 'indentWithTabs' => false,
                 'tabSize'        => 2,
             ],
 
             // texts
-            't_title' => Translate::t('code.formtitle', $this->textdomain),
+            't_title'   => Translate::t('code.formtitle', $this->textdomain),
             't_content' => Translate::t('code.formcontent', $this->textdomain),
         ];
     }
@@ -65,7 +65,7 @@ class Code extends Field
      *
      * @return array
      */
-    protected function getVars($value, $contents)
+    protected function getVars($value, $contents) : array
     {
         // Get contents
         $vars = $contents;
@@ -83,9 +83,9 @@ class Code extends Field
     /**
      * Return all available modes.
      *
-     * @return array $modes
+     * @return array
      */
-    protected function getModes()
+    protected function getModes() : array
     {
         return [
             ['text/css', 'css'],
@@ -108,10 +108,11 @@ class Code extends Field
     /**
      * Return all available modes.
      *
-     * @param   string $search  Mode we are looking for
-     * @return  string $good    Real mode name
+     * @param   string  $search
+     *
+     * @return  string
      */
-    protected function retrieveMode($search)
+    protected function retrieveMode($search) : string
     {
         // List all modes
         $modes = $this->getModes();
