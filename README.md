@@ -90,14 +90,14 @@ echo '<pre>'.htmlspecialchars($code).'</pre>';
 
 ## Release History
 
-* 0.0.12
+0.0.12
 - New Olympus components compatibility
 - Change repository to be a part of Dionysos fields
 
-* 0.0.11
+0.0.11
 - FIX: json encoder in twig source file
 
-* 0.0.10
+0.0.10
 - FIX: remove twig dependency from composer
 
 ## Authors and Copyright
