@@ -1,4 +1,4 @@
-# Code Field
+# Dionysos Code Field
 > This component is a part of the **Olympus Dionysos fields** for **WordPress**.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
 
@@ -121,7 +121,7 @@ Please, read [LICENSE][license-blob] for more information.
 
 ---
 
-**Built with ♥ by [Achraf Chouk](http://github.com/crewstyle "Achraf Chouk") ~ (c) since a long time.**
+**Built with ♥ by [Achraf Chouk](https://github.com/crewstyle "Achraf Chouk") ~ (c) since a long time.**
 
 <!-- links & imgs dfn's -->
 [olympus-image]: https://img.shields.io/badge/for-Olympus-44cc11.svg?style=flat-square
@@ -135,4 +135,4 @@ Please, read [LICENSE][license-blob] for more information.
 [packagist-image]: https://img.shields.io/packagist/v/getolympus/olympus-dionysos-field-code.svg?style=flat-square
 [packagist-url]: https://packagist.org/packages/getolympus/olympus-dionysos-field-code
 [twitter-image]: https://img.shields.io/badge/crewstyle-blue.svg?style=social&logo=twitter
-[twitter-url]: http://twitter.com/crewstyle
+[twitter-url]: https://twitter.com/crewstyle
