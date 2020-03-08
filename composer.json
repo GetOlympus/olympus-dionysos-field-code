@@ -1,9 +1,9 @@
 {
-  "name": "getolympus/olympus-code-field",
+  "name": "getolympus/olympus-dionysos-field-code",
   "type": "olympus-field",
-  "description": "Code field, this component is a part of the Olympus Zeus Core framework.",
-  "keywords": ["olympus-zeus", "code", "field", "custom", "codemirror", "framework", "php", "wordpress"],
-  "homepage": "https://github.com/GetOlympus/olympus-code-field",
+  "description": "Code field, this component is a part of the Olympus Dionysos fields.",
+  "keywords": ["olympus", "dionysos", "code", "field", "custom", "codemirror", "framework", "php", "wordpress"],
+  "homepage": "https://github.com/GetOlympus/olympus-dionysos-field-code",
   "license": "MIT",
   "authors": [
     {
@@ -13,7 +13,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "GetOlympus\\Field\\": "src/Code/"
+      "GetOlympus\\Dionysos\\Field\\": "src/Code/"
     }
   },
   "extra": {

@@ -1,17 +1,16 @@
 <?php
 
-namespace GetOlympus\Field;
+namespace GetOlympus\Dionysos\Field;
 
 use GetOlympus\Zeus\Field\Field;
-use GetOlympus\Zeus\Utils\Translate;
 
 /**
  * Builds Code field.
  *
- * @package DionysosField
+ * @package    DionysosField
  * @subpackage Code
- * @author Achraf Chouk <achrafchouk@gmail.com>
- * @since 0.0.1
+ * @author     Achraf Chouk <achrafchouk@gmail.com>
+ * @since      0.0.1
  *
  */
 
@@ -35,7 +34,7 @@ class Code extends Field
     protected function getDefaults() : array
     {
         return [
-            'title'       => Translate::t('code.title', $this->textdomain),
+            'title'       => parent::t('code.title', $this->textdomain),
             'default'     => '',
             'description' => '',
             'mode'        => 'text/html',
@@ -52,8 +51,8 @@ class Code extends Field
             ],
 
             // texts
-            't_title'   => Translate::t('code.formtitle', $this->textdomain),
-            't_content' => Translate::t('code.formcontent', $this->textdomain),
+            't_title'   => parent::t('code.formtitle', $this->textdomain),
+            't_content' => parent::t('code.formcontent', $this->textdomain),
         ];
     }
 
