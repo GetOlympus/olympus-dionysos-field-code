@@ -1,5 +1,5 @@
 # Code Field
-> This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.  
+> This component is a part of the **Olympus Dionysos fields** for **WordPress**.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
 
 [![Olympus Component][olympus-image]][olympus-url]
@@ -11,7 +11,7 @@ composer require getolympus/olympus-dionysos-field-code
 ```
 
 <p align="center">
-    <img src="https://github.com/GetOlympus/olympus-dionysos-field-code/blob/master/assets/field-code.png" />
+    <img src="https://github.com/GetOlympus/olympus-dionysos-field-code/blob/master/assets/field-code-64.png" />
 </p>
 
 ## Field initialization
@@ -90,14 +90,14 @@ echo '<pre>'.htmlspecialchars($code).'</pre>';
 
 ## Release History
 
-* 0.0.12
+0.0.12
 - New Olympus components compatibility
 - Change repository to be a part of Dionysos fields
 
-* 0.0.11
+0.0.11
 - FIX: json encoder in twig source file
 
-* 0.0.10
+0.0.10
 - FIX: remove twig dependency from composer
 
 ## Authors and Copyright
@@ -126,7 +126,6 @@ Please, read [LICENSE][license-blob] for more information.
 <!-- links & imgs dfn's -->
 [olympus-image]: https://img.shields.io/badge/for-Olympus-44cc11.svg?style=flat-square
 [olympus-url]: https://github.com/GetOlympus
-[zeus-url]: https://github.com/GetOlympus/Zeus-Core
 [codefactor-image]: https://www.codefactor.io/repository/github/GetOlympus/olympus-dionysos-field-code/badge?style=flat-square
 [codefactor-url]: https://www.codefactor.io/repository/github/getolympus/olympus-dionysos-field-code
 [getoption-url]: https://developer.wordpress.org/reference/functions/get_option/
