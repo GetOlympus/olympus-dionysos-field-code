@@ -1,4 +1,12 @@
+<img src="https://github.com/GetOlympus/olympus-dionysos-field-code/blob/master/assets/field-code.png" align="left" />
+
 # Dionysos Code Field
+
+[![Olympus Component][olympus-image]][olympus-url]
+[![CodeFactor Grade][codefactor-image]][codefactor-url]
+[![Packagist Version][packagist-image]][packagist-url]
+[![MIT][license-image]][license-blob]
+
 > This component is a part of the **Olympus Dionysos fields** for **WordPress**.  
 > It uses the default WordPress code field made with a complete integration with codemirror JS component.
 
@@ -8,16 +16,9 @@ composer require getolympus/olympus-dionysos-field-code
 
 ---
 
-[![Olympus Component][olympus-image]][olympus-url]
-[![CodeFactor Grade][codefactor-image]][codefactor-url]
-[![Packagist Version][packagist-image]][packagist-url]
-[![MIT][license-image]][license-blob]
+## Table of contents
 
----
-
-<p align="center">
-    <img src="https://github.com/GetOlympus/olympus-dionysos-field-code/blob/master/assets/field-code-64.png" />
-</p>
+[Field initialization](#field-initialization) • [Variables definition](#variables-definition) • [Accepted mode](#accepted-mode) • [Retrive data](#retrive-data) • [Release History](#release-history) • [Contributing](#contributing)
 
 ---
 
@@ -45,7 +46,7 @@ return \GetOlympus\Dionysos\Field\Code::build('my_code_field_id', [
 ]);
 ```
 
-## Variables definitions
+## Variables definition
 
 | Variable      | Type    | Default value if not set | Accepted values |
 | ------------- | ------- | ------------------------ | --------------- |
@@ -95,17 +96,13 @@ $code = get_option('my_code_field_id', '');
 echo '<pre>'.htmlspecialchars($code).'</pre>';
 ```
 
-## Release History
+## Release history
 
-0.0.12
-- New Olympus components compatibility
-- Change repository to be a part of Dionysos fields
-
-0.0.11
-- FIX: json encoder in twig source file
-
-0.0.10
-- FIX: remove twig dependency from composer
+| Version | Note |
+| :------ | :--- |
+| 0.0.13  | Add new CodeMirror css for widget integration |
+| 0.0.12  | New Olympus components compatibility<br/>Change repository to be a part of Dionysos fields |
+| 0.0.11  | Fix json encoder in twig source file |
 
 ## Contributing
 
