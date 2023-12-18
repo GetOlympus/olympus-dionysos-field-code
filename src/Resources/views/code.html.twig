@@ -4,14 +4,12 @@
 {% block label %}<label for="{{ identifier }}">{{ title|raw }}</label>{% endblock %}
 
 {% block field %}
-    <div class="olz-field code">
+    <div class="dionysos-field code">
         <textarea name="{{ name }}" id="{{ identifier }}" rows="{{ rows }}"{{ readonly ? ' readonly' : '' }} class="content sync-input" hidden>{{ value }}</textarea>
 
         <script>
             (function($) {
-                $(document).ready(function() {
-                    wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace({"'": "&#39;"})|raw }});
-                });
+                wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace({"'": "&#39;"})|raw }});
             })(jQuery);
         </script>
     </div>

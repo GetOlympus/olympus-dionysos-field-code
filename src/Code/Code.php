@@ -19,6 +19,11 @@ class Code extends Field
     /**
      * @var string
      */
+    protected $style = 'css'.S.'code.css';
+
+    /**
+     * @var string
+     */
     protected $template = 'code.html.twig';
 
     /**
