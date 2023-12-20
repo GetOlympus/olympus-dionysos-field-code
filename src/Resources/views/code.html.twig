@@ -9,7 +9,9 @@
 
         <script>
             (function($) {
-                wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace({"'": "&#39;"})|raw }});
+                $(document).ready(function() {
+                    wp.codeEditor.initialize($('#{{ identifier }}'), {{ code_editor|json_encode|replace({"'": "&#39;"})|raw }});
+                });
             })(jQuery);
         </script>
     </div>

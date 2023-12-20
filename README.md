@@ -100,9 +100,9 @@ echo '<pre>'.htmlspecialchars($code).'</pre>';
 
 | Version | Note |
 | :------ | :--- |
+| 0.0.14  | Fix jQuery integration on domReady |
 | 0.0.13  | Add new CodeMirror css for widget integration |
 | 0.0.12  | New Olympus components compatibility<br/>Change repository to be a part of Dionysos fields |
-| 0.0.11  | Fix json encoder in twig source file |
 
 ## Contributing
 
